@@ -1,0 +1,105 @@
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir foldername
+
+3) Зайти в папку
+cd foldername
+
+4) Создать 3 папки
+mkdir foldername_1
+mkdir foldername_2
+mkdir foldername_3
+
+5) Зайти в любоую папку
+cd foldername_2
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch filename_1.txt
+touch filename_2.txt
+touch filename_3.txt
+touch filename_4.json
+touch filename_5.json
+
+7) Создать 3 папки
+mkdir foldername_1.1
+mkdir foldername_2.1
+mkdir foldername_3.1
+
+8) Вывести список содержимого папки
+ls -la foldername_1.1
+или
+ls -l foldername_1.1
+
+9) Открыть любой txt файл
+cat filename_3.txt
+vim filename_3.txt
+
+10) написать туда что-нибудь, любой текст.
+insert
+"любой текст"
+
+11) + сохранить и выйти.
+esc : wq
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv foldername_2/filename_1.txt foldername_1.1/filename_1.txt
+mv foldername_2/filename_4.json foldername_3.1/filename_4.json
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp foldername_2/filename_1.txt foldername_1.1/filename_1.txt
+cp foldername_2/filename_4.json foldername_3.1/filename_4.json
+
+15) Найти файл по имени
+find foldername -name filename_3.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+grep line filename_3.txt
+
+17) вывести несколько первых строк из текстового файла
+head filename_3.txt
+
+18) вывести несколько последних строк из текстового файла
+tail filename_3.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less filename_3.txt
+
+20) вывести дату и время
+date
+
+Задание *
+1) Отправить http запрос на сервер --
+curl http://162.55.220.72:5005/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name=Pavel&age=24"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+echo "Зайти в папку"
+cd foldername
+
+echo "Создать 3 папки"
+mkdir foldername_1 foldername_2 foldername_3
+
+echo "Зайти в любоую папку"
+cd foldername_2
+
+echo "Создать 5 файлов (3 txt, 2 json)"
+touch filename_1.txt filename_2.txt filename_3.txt filename_4.json filename_5.json 
+
+echo "Создать 3 папки"
+mkdir foldername_1.1 foldername_2.1 foldername_3.1
+
+echo "Вывести список содержимого папки"
+ls -la
+
+echo "переместить любые 2 файла в другую папку"
+mv foldername_2/filename_1.txt foldername_1.1/filename_1.txt foldername_new
+
+
